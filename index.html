@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+     <!-- font families-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+     <!-- font families-->
+
+     <!-- Styles for this template -->
+      <link rel="stylesheet" href="style.css">
+     <!-- Styles for this template -->
+
+     <!--    font awesome icon sheet-->
+      <script src="https://kit.fontawesome.com/1ab94d0eba.js" crossorigin="anonymous"></script>
+     <!--    font awesome icon sheet-->
+
+</head>
+<body>
+    <main class="container">
+        <h2>Login</h2>
+        <form action="">
+            <fieldset class="input-field">
+                <input type="email" name="email" 
+                    placeholder="Email"  value="" id="email" required autocomplete="off">
+                    <span class="container__icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <p class="invalid-camp"></p>
+            </fieldset>
+
+            <fieldset class="input-field">
+                <input type="password" name="senha" id="password"
+                    placeholder="Password"  minlength="5" required>
+                    <span class="container__icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </span>
+                    <p class="invalid-camp"></p>
+            </fieldset>
+
+            <button type="submit">Sign in</button>
+        </form>
+
+        <footer>
+            <span>or connect with </span>
+            <div class="social-fields">
+                <div class="social-field google">
+                    <a href="#">
+                        <i class="fab fa-google"></i>
+                        Google
+                    </a>
+                </div>
+                <div class="social-field facebook">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                            facebook
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </main>
+   
+    <!-- import validate script -->
+        <script src="script.js"></script>
+    <!-- import validate script  -->
+
+    <!-- to start, enter the element -->
+    <script>
+        const inputs = document.querySelectorAll('[required]');
+         for (let input of inputs) {
+            new ValidateField(input);
+         }
+    </script>
+
+    <!-- to start, enter the element -->
+</body>
+</html>
